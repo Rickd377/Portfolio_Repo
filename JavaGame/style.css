@@ -1,0 +1,671 @@
+@font-face {
+    font-family: 'casino';
+    src: url(CasinoRegular-Wyz4G.ttf);
+}
+
+body {
+    max-height: 100vh;
+    overflow-y: hidden;
+    background-size: cover;
+    background-image: linear-gradient(to bottom right, #4B548B, #9392C7, #D1C2D9, #E9E2ED);
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". backtopage backtopage backtopage backtopage title title title title . . . placeholder ."
+        ". box box box box box box box box box box box box ."
+        ". box box box box box box box box box box box box ."
+        ". box box box box box box box box box box box box ."
+        ". . ownname player1Highscore . start start start start bot player2Highscore resetscore resetscore .";
+}
+
+.box {
+    box-shadow: 7px 8px #E9E2ED;
+    padding: 5px;
+    grid-area: box;
+    border: 0px solid transparent;
+    border-radius: 20px;
+    background-color: white;
+    -webkit-user-drag: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "vakje1 vakje2 vakje3 vakje4 vakje5 vakje6 vakje7 vakje8 vakje9 vakje10 vakje11 vakje12 vakje13 vakje14"
+        "vakje34 vakje35 vakje36 vakje37 vakje38 vakje39 vakje40 vakje41 vakje42 vakje43 vakje44 vakje45 vakje46 vakje15"
+        "vakje33 vakje60 vakje61 vakje62 vakje63 vakje64 youwin youwin youwin youwin youwin youwin vakje47 vakje16"
+        "vakje32 vakje59 vakje58 vakje57 vakje56 vakje55 vakje54 vakje53 vakje52 vakje51 vakje50 vakje49 vakje48 vakje17"
+        "vakje31 vakje30 vakje29 vakje28 vakje27 vakje26 vakje25 vakje24 vakje23 vakje22 vakje21 vakje20 vakje19 vakje18"
+}
+
+
+.box>div>img {
+    width: 90px;
+    border: 0 solid transparent;
+    border-radius: 20px;
+    box-shadow: 4px 6px #888;
+    margin: 3px;
+    user-select: none;
+    position: relative;
+    z-index: 0;
+    -webkit-user-drag: none;
+}
+
+div>.player1image {
+    width: 45px;
+    position: absolute;
+    z-index: 0;
+    margin: 5px;
+    user-select: none;
+}
+/* youwin icons */
+div.youwin>div>img.player1image {
+    margin-top: -30px;
+    margin-left: -80px;
+    z-index: -2;
+}
+
+div.youwin>div>img.player2image {
+    margin-top: -30px;
+    margin-left: 350px;
+    z-index: -2;
+}
+
+div>.player2image {
+    width: 45px;
+    position: absolute;
+    z-index: 0;
+    margin-top: 48px;
+    margin-left: 46px;
+    user-select: none;
+}
+
+.box>div>img:active {
+    border: 0 solid transparent;
+    border-radius: 20px;
+    box-shadow: 2px 4px #555;
+    transform: translateY(2px);
+    transform: translateX(1px);
+    transform: scale(0.97);
+}
+
+.instruction {
+    grid-area: instruction;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textinstruction {
+    font-family: casino;
+    font-size: 20px;
+}
+
+
+.youwin {
+    grid-area: youwin;
+    text-align: center;
+    font-family: casino;
+    border: 0px solid transparent;
+    border-radius: 20px;
+    margin: 3px;
+    height: 90px;
+    font-size: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    background-color: #E9E2ED;
+    box-shadow: 4px 6px #777;
+}
+
+.youwin:active {
+    border: 0 solid transparent;
+    border-radius: 20px;
+    box-shadow: 2px 4px #444;
+    transform: translateY(2px);
+    transform: translateX(1px);
+}
+
+#placeholder {
+    grid-area: placeholder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0 solid transparent;
+    border-radius: 20px;
+    font-size: 50px;
+    text-align: center;
+    background-color: white;
+    font-family: casino;
+    user-select: none;
+    cursor: pointer;
+    margin: 18px;
+    box-shadow: 4px 6px #E9E2ED;
+    height: 60px;
+}
+
+.title {
+    grid-area: title;
+    text-align: center;
+    font-family: casino;
+    border: 0px solid transparent;
+    border-radius: 20px;
+    margin: 18px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    background-color: white;
+    box-shadow: 4px 6px #E9E2ED;
+    height: 60px;
+}
+
+.arrowicon {
+    width: 50px;
+    user-select: none;
+}
+
+.arrowiconright {
+    width: 50px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+.backtopage {
+    grid-area: backtopage;
+    text-align: center;
+    font-family: casino;
+    border: 0px solid transparent;
+    border-radius: 20px;
+    margin: 18px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    background-color: white;
+    box-shadow: 4px 6px #E9E2ED;
+    height: 60px;
+    width: 350px;
+}
+
+div.start>a {
+    text-decoration: none;
+    color: black;
+}
+
+.refresh {
+    padding: 10px;
+    padding-left: 90px;
+    padding-right: 90px;
+    border-radius: 20px;
+    font-family: casino;
+    font-size: 34px;
+    background-color: white;
+    border: none;
+    margin: 5px;
+}
+
+.start {
+    grid-area: start;
+    text-align: center;
+    font-family: casino;
+    border: 0px solid transparent;
+    border-radius: 20px;
+    height: 40px;
+    padding: 10px;
+    margin: 20px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    background-color: white;
+    box-shadow: 4px 6px #E9E2ED;
+    cursor: pointer;
+
+}
+
+#player1Highscore {
+    grid-area: player1Highscore;
+    text-align: center;
+    font-family: casino;
+    border: 0px solid transparent;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    user-select: none;
+    background-color: white;
+    box-shadow: 4px 6px #E9E2ED;
+}
+
+#player2Highscore {
+    grid-area: player2Highscore;
+    text-align: center;
+    font-family: casino;
+    border: 0px solid transparent;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px;
+    font-size: 50px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    background-color: white;
+    box-shadow: 4px 6px #E9E2ED;
+
+}
+
+#resetscore {
+    grid-area: resetscore;
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    border: 0px solid transparent;
+    background-color: white;
+    box-shadow: 4px 6px #E9E2ED;
+    font-family: casino;
+    font-size: x-large;
+    margin-top: 30px;
+    margin-left: 50px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#resetscore:active {
+    background-color:red;
+}
+
+.bot {
+    grid-area: bot;
+    font-family: casino;
+    margin-top: 40px;
+    margin-left: 80px;
+    float: right;
+    font-size: x-large;
+}
+
+
+#ownname {
+    grid-area: ownname;
+    font-family: casino;
+    margin-top: 40px;
+    margin-left: 80px;
+    float: right;
+    font-size: x-large;
+}
+.vakje1 {
+    grid-area: vakje1;
+}
+
+.vakje2 {
+    grid-area: vakje2;
+}
+
+.vakje3 {
+    grid-area: vakje3;
+}
+
+.vakje4 {
+    grid-area: vakje4;
+}
+
+.vakje5 {
+    grid-area: vakje5;
+}
+
+.vakje6 {
+    grid-area: vakje6;
+}
+
+.vakje7 {
+    grid-area: vakje7;
+}
+
+.vakje8 {
+    grid-area: vakje8;
+}
+
+.vakje9 {
+    grid-area: vakje9;
+}
+
+.vakje10 {
+    grid-area: vakje10;
+}
+
+.vakje11 {
+    grid-area: vakje11;
+}
+
+.vakje12 {
+    grid-area: vakje12;
+}
+
+.vakje13 {
+    grid-area: vakje13;
+}
+
+.vakje14 {
+    grid-area: vakje14;
+}
+
+.vakje15 {
+    grid-area: vakje15;
+}
+
+.vakje16 {
+    grid-area: vakje16;
+}
+
+.vakje17 {
+    grid-area: vakje17;
+}
+
+.vakje18 {
+    grid-area: vakje18;
+}
+
+.vakje19 {
+    grid-area: vakje19;
+}
+
+.vakje20 {
+    grid-area: vakje20;
+}
+
+.vakje21 {
+    grid-area: vakje21;
+}
+
+.vakje22 {
+    grid-area: vakje22;
+}
+
+.vakje23 {
+    grid-area: vakje23;
+}
+
+.vakje24 {
+    grid-area: vakje24;
+}
+
+.vakje25 {
+    grid-area: vakje25;
+}
+
+.vakje26 {
+    grid-area: vakje26;
+}
+
+.vakje27 {
+    grid-area: vakje27;
+}
+
+.vakje28 {
+    grid-area: vakje28;
+}
+
+.vakje29 {
+    grid-area: vakje29;
+}
+
+.vakje30 {
+    grid-area: vakje30;
+}
+
+.vakje31 {
+    grid-area: vakje31;
+}
+
+.vakje32 {
+    grid-area: vakje32;
+}
+
+.vakje33 {
+    grid-area: vakje33;
+}
+
+.vakje34 {
+    grid-area: vakje34;
+}
+
+.vakje35 {
+    grid-area: vakje35;
+}
+
+.vakje36 {
+    grid-area: vakje36;
+}
+
+.vakje37 {
+    grid-area: vakje37;
+}
+
+.vakje38 {
+    grid-area: vakje38;
+}
+
+.vakje39 {
+    grid-area: vakje39;
+}
+
+.vakje40 {
+    grid-area: vakje40;
+}
+
+.vakje41 {
+    grid-area: vakje41;
+}
+
+.vakje42 {
+    grid-area: vakje42;
+}
+
+.vakje43 {
+    grid-area: vakje43;
+}
+
+.vakje44 {
+    grid-area: vakje44;
+}
+
+.vakje45 {
+    grid-area: vakje45;
+}
+
+.vakje46 {
+    grid-area: vakje46;
+}
+
+.vakje47 {
+    grid-area: vakje47;
+}
+
+.vakje48 {
+    grid-area: vakje48;
+}
+
+.vakje49 {
+    grid-area: vakje49;
+}
+
+.vakje50 {
+    grid-area: vakje50;
+}
+
+.vakje51 {
+    grid-area: vakje51;
+}
+
+.vakje52 {
+    grid-area: vakje52;
+}
+
+.vakje53 {
+    grid-area: vakje53;
+}
+
+.vakje54 {
+    grid-area: vakje54;
+}
+
+.vakje55 {
+    grid-area: vakje55;
+}
+
+.vakje56 {
+    grid-area: vakje56;
+}
+
+.vakje57 {
+    grid-area: vakje57;
+}
+
+.vakje58 {
+    grid-area: vakje58;
+}
+
+.vakje59 {
+    grid-area: vakje59;
+}
+
+.vakje60 {
+    grid-area: vakje60;
+}
+
+.vakje61 {
+    grid-area: vakje61;
+}
+
+.vakje62 {
+    grid-area: vakje62;
+}
+
+.vakje63 {
+    grid-area: vakje63;
+}
+
+.vakje64 {
+    grid-area: vakje64;
+}
+
+@media screen and (max-width:770px) {
+    .container {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+        grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+        grid-auto-columns: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            ". backtopage backtopage backtopage . title title title title . . . placeholder ."
+            ". box box box box box box box box box box box box ."
+            ". box box box box box box box box box box box box ."
+            ". box box box box box box box box box box box box ."
+            ". . . player1Highscore . start start start start . player2Highscore . . .";
+    }
+    .box {
+        box-shadow: 7px 8px #E9E2ED;
+        padding: 5px;
+        grid-area: box;
+        border: 0px solid transparent;
+        border-radius: 20px;
+        background-color: white;
+        -webkit-user-drag: none;
+        display: grid;
+        width: 672px;
+        height: 270px;
+        grid-template-columns: 0,5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0,2fr 0,2fr 0,2fr 0,2fr 0,2fr;
+        grid-auto-columns: 1fr;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "vakje1 vakje2 vakje3 vakje4 vakje5 vakje6 vakje7 vakje8 vakje9 vakje10 vakje11 vakje12 vakje13 vakje14"
+            "vakje34 vakje35 vakje36 vakje37 vakje38 vakje39 vakje40 vakje41 vakje42 vakje43 vakje44 vakje45 vakje46 vakje15"
+            "vakje33 vakje60 vakje61 vakje62 vakje63 vakje64 youwin youwin youwin youwin youwin youwin vakje47 vakje16"
+            "vakje32 vakje59 vakje58 vakje57 vakje56 vakje55 vakje54 vakje53 vakje52 vakje51 vakje50 vakje49 vakje48 vakje17"
+            "vakje31 vakje30 vakje29 vakje28 vakje27 vakje26 vakje25 vakje24 vakje23 vakje22 vakje21 vakje20 vakje19 vakje18"
+    }
+    .box>div>img {
+        width: 42px;
+        border: 0 solid transparent;
+        border-radius: 10px;
+    }
+    div>.player2image {
+        width: 20px;
+        margin-right: 20px;
+        margin-top: 25px;
+        margin-left: 25px;
+    }
+
+    div>.player1image {
+        width: 20px;
+    }
+    .title {
+        font-size: 20px;
+        padding: 0;
+        margin: 10px;
+        border-radius: 10px;
+    }
+    .youwin {
+       height: 42px; 
+       font-size: 40px;
+    }
+    .refresh {
+        padding: 5px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 10px;
+        font-family: casino;
+        font-size: 18px;
+        background-color: white;
+        border: none;
+    }
+    .backtopage {
+        font-size: 20px;
+        padding: 0;
+        margin: 10px;
+        border-radius: 10px;
+        width: 125px;
+    }
+    #placeholder {
+        font-size: 25px;
+        padding: 0;
+        margin: 10px;
+        border-radius: 10px;
+    }
+
+    .start {
+        margin-top: -100px;
+        font-size: 20px;
+        ;
+    }
+    .player1Highscore {
+        margin-top: -100px;
+    }
+    .player2Highscore {
+        margin-top: -100px;
+    }
+}

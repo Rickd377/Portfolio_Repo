@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            Coin Chase
+        </div>
+        <div id="placeholder">
+         </div>
+         <div class="bot">Bot:</div>
+         <div id="ownname">. . .</div>
+        <div class="backtopage">
+            <button class="refresh" type="submit" onClick="refreshPage()">Play again</button>
+        </div>
+        <div class="start" onclick="startGame()">
+            <a>Start Game</a>
+        </div>
+            <div id="player1Highscore"></div>
+            <div id="player2Highscore"></div>
+            <button id="resetscore" onclick="resetCookies()">Reset score</button>
+        <div class="box">
+            <div class="vakje1">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/1.png">
+            </div>
+            <div class="vakje2">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/2.png">
+            </div>
+            <div class="vakje3">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/3.png">
+            </div>
+            <div class="vakje4">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/4.png">
+            </div>
+            <div class="vakje5">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/5.png">
+            </div>
+            <div class="vakje6">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/6.png">
+            </div>
+            <div class="vakje7">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/7.png">
+            </div>
+            <div class="vakje8">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/8.png">
+            </div>
+            <div class="vakje9">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/9.png">
+            </div>
+            <div class="vakje10">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/10.png">
+            </div>
+            <div class="vakje11">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/11.png">
+            </div>
+            <div class="vakje12">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/12.png">
+            </div>
+            <div class="vakje13">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/13.png">
+            </div>
+            <div class="vakje14">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/14.png">
+            </div>
+            <div class="vakje15">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/15.png">
+            </div>
+            <div class="vakje16">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/16.png">
+            </div>
+            <div class="vakje17">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/17.png">
+            </div>
+            <div class="vakje18">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/18.png">
+            </div>
+            <div class="vakje19">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/19.png">
+            </div>
+            <div class="vakje20">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/20.png">
+            </div>
+            <div class="vakje21">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/21.png">
+            </div>
+            <div class="vakje22">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/22.png">
+            </div>
+            <div class="vakje23">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/23.png">
+            </div>
+            <div class="vakje24">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/24.png">
+            </div>
+            <div class="vakje25">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/25.png">
+            </div>
+            <div class="vakje26">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/26.png">
+            </div>
+            <div class="vakje27">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/27.png">
+            </div>
+            <div class="vakje28">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/28.png">
+            </div>
+            <div class="vakje29">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/29.png">
+            </div>
+            <div class="vakje30">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/30.png">
+            </div>
+            <div class="vakje31">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/31.png">
+            </div>
+            <div class="vakje32">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/32.png">
+            </div>
+            <div class="vakje33">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/33.png">
+            </div>
+            <div class="vakje34">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/34.png">
+            </div>
+            <div class="vakje35">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/35.png">
+            </div>
+            <div class="vakje36">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/36.png">
+            </div>
+            <div class="vakje37">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/37.png">
+            </div>
+            <div class="vakje38">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/38.png">
+            </div>
+            <div class="vakje39">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/39.png">
+            </div>
+            <div class="vakje40">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/40.png">
+            </div>
+            <div class="vakje41">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/41.png">
+            </div>
+            <div class="vakje42">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/42.png">
+            </div>
+            <div class="vakje43">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/43.png">
+            </div>
+            <div class="vakje44">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/44.png">
+            </div>
+            <div class="vakje45">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/45.png">
+            </div>
+            <div class="vakje46">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/46.png">
+            </div>
+            <div class="vakje47">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/47.png">
+            </div>
+            <div class="vakje48">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/48.png">
+            </div>
+            <div class="vakje49">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/49.png">
+            </div>
+            <div class="vakje50">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/50.png">
+            </div>
+            <div class="vakje51">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/51.png">
+            </div>
+            <div class="vakje52">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/52.png">
+            </div>
+            <div class="vakje53">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/53.png">
+            </div>
+            <div class="vakje54">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/54.png">
+            </div>
+            <div class="vakje55">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/55.png">
+            </div>
+            <div class="vakje56">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/56.png">
+            </div>
+            <div class="vakje57">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/57.png">
+            </div>
+            <div class="vakje58">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/58.png">
+            </div>
+            <div class="vakje59">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/59.png">
+            </div>
+            <div class="vakje60">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/60.png">
+            </div>
+            <div class="vakje61">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/61.png">
+            </div>
+            <div class="vakje62">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/62.png">
+            </div>
+            <div class="vakje63">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/63.png">
+            </div>
+            <div class="vakje64">
+                <div>
+                    <img class="player1image" src="Game graphics en assets/Player 1 pion.png">
+                </div>
+                <div>
+                    <img class="player2image" src="Game graphics en assets/Player 2 pion.png">
+                </div>
+                <img src="Game graphics en assets/Vakjes/64.png">
+            </div>
+            <div class="youwin">
+                You Win!!!
+            </div>
+        </div>
+        <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.4fr ;
+  grid-template-rows: 0.2fr 0.2fr 0.5fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 5px 5px;
+  grid-auto-flow: row;
+}
+
+
+.head {
+  grid-area: 1 / 2 / 1 / 12;
+}
+
+.nav {
+  grid-area: 1 / 12 / 6 / 12;
+}
+
+.title {
+  grid-area: 4 / 3 / 4 / 10;
+}
+
+.info {
+  grid-area: 5 / 3 / 5 / 10;
+}
+
+.subjects {
+  grid-area: 6 / 3 / 6 / 6;
+}
+
+.onderwerpen {
+  grid-area: 6 / 6 / 6 / 10;
+}
+
+.technowireimg {
+  grid-area: 1 / 1 / 1 / 1;
+}
+
+.head{
+  margin-right: 110px;
+}
+
+.title {
+  text-align: center;
+  color: black;
+  font-size: 15px;
+  font-family: myFont;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.info {
+  text-align: center;
+  color: block;
+  font-size: 15px;
+  font-family: myFont;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: white;
+  font-size: large;
+  padding: 5px;
+}
+
+
+.subjects {
+  text-align: center;
+  color: black;
+  font-size: large;
+  font-family: myFont;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: white;
+  font-size: larger;
+}
+
+.onderwerpen {
+  color: black;
+  font-size: 15px;
+  font-family: myFont;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding-left: 20px;
+  background-color: white;
+  font-size: large;
+}
+
+@media screen and (max-width:450px) {
+  .container {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.2fr;
+    grid-template-rows: 0.2fr 0.2fr 0.5fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+  }
+
+  .head {
+    font-family: myFont;
+    font-weight: 900;
+    margin-right: -1px;
+    font-size: 30;
+    margin-top: 10px;
+  }
+
+  .head {
+    grid-area: 1 / 1 / 2 / 12;
+  }
+
+  .img {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .nav {
+    grid-area: 1 / 11 / 6 / 12;
+  }
+
+  .title {
+    grid-area: 3 / 2 / 3 / 12;
+  }
+
+  .info {
+    grid-area: 4 / 2 / 5 / 12;
+  }
+
+  .subjects {
+    grid-area: 5 / 2 / 6 / 7;
+  }
+
+  .onderwerpen {
+    grid-area: 5 / 7 / 6 / 12;
+  }
+
+  .dropdown {
+    grid-area: 1 / 1 / 3 / 5;
+  }
+
+  .title{
+    margin-right: 10px;
+  }
+
+  .info{
+    margin-right: 10px;
+    padding: 5px;
+  }
+
+  .onderwerpen{
+    margin-right: 10px;
+  }
+  
+}
+
+@media screen and (max-width: 1289px) {
+  .nav {
+    margin-right: 130px;
+  }
+}
